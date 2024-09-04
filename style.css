@@ -1,21 +1,29 @@
 /* BASE STYLES */
 * {
     font-family: sans-serif;
-    font-size: 20px
+    font-size: 20px;
+    /* margin reset */
+    margin: 0;
 }
+
+/* Added display flex */
 .navbar {
     width: 100vw;
     background-color: #59D9A1;
     padding-left: 30px;
     padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
 }
   
 .logo {
     display: inline-block;
 }
   
+/* flex to align navlinks */
 .nav-links {
     list-style: none;
+    display: flex;
 }
   
 .nav-item a {
@@ -43,21 +51,28 @@
     vertical-align: middle;
 }
 
+/* parent flex, column on child */
+.flex-main {
+    background-color: #F5F5F5;
+    width: 100%;
+    padding-right: 2.5rem;
+    display: flex;
+}
+
+/* column on child, flex on parent */
 .sidebar {
     background-color: #242457;
     color: white;
     padding: 3rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer img {
     width: 3%;
 }
 
-.flex-main {
-    background-color: #F5F5F5;
-    width: 100%;
-    padding-right: 2.5rem;
-}
 
 .image-container{
     height: 30vh;
@@ -75,6 +90,13 @@ footer {
     width: 100%;
     padding: 1rem;
     background-color: #59D9A1;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* CODE YOUR FLEXBOXES HERE */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
